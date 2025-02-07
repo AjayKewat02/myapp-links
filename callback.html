@@ -12,7 +12,7 @@ console.log("urlParams",urlParams)
 console.log("code",code)
   if (code) {
     // Use a mechanism (like postMessage or a redirect) to send the code to the app
-    window.location.href = 'myapp://zoom/callback?code=' + code;
+    window.location.href = 'myapp://zoom/callback?code=' + urlParams;
   }
 </script>
   </body>
