@@ -7,12 +7,12 @@
 
 <script>
   const urlParams = new URLSearchParams(window.location.search);
-console.log("urlParams",urlParams)
+
   const code = urlParams.get('code');
-console.log("code",code)
+
   if (code) {
     // Use a mechanism (like postMessage or a redirect) to send the code to the app
-    window.location.href = 'myapp://zoom/callback?code=' + urlParams;
+    window.location.href = 'myapp://zoom/callback?urlParams=' + urlParams + "code"+code;
   }
 </script>
   </body>
