@@ -4,5 +4,16 @@
   </head>
   <body>
     <p>Redirecting...</p>
+
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+console.log("urlParams",urlParams)
+  const code = urlParams.get('code');
+console.log("code",code)
+  if (code) {
+    // Use a mechanism (like postMessage or a redirect) to send the code to the app
+    window.location.href = 'myapp://zoom/callback?code=' + code;
+  }
+</script>
   </body>
 </html>
